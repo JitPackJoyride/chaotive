@@ -2,23 +2,16 @@
 	import { page } from "$app/stores"
 	import { trpc } from "$lib/trpc/client"
 
-	let greeting = "press the button to load data"
-	let loading = false
-
-	const loadData = async () => {
-		loading = true
-		greeting = await trpc($page).greeting.query()
-		loading = false
-	}
+	const client = trpc($page)
+	const hello = client.greeting.createQuery("foo", { retry: false })
 </script>
 
-<h6>Loading data in<br /><code>+page.svelte</code></h6>
-
-<a
-	href="#load"
-	role="button"
-	class="secondary"
-	aria-busy={loading}
-	on:click|preventDefault={loadData}>Load</a
->
-<p>{greeting}</p>
+<p>
+	{#if $hello.isLoading}
+		Loading...
+	{:else if $hello.isError}
+		Error: {$hello.error.message}
+	{:else}
+		{$hello.data}
+	{/if}
+</p>
