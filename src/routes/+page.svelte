@@ -3,10 +3,10 @@
 	import { trpc } from "$lib/trpc/client"
 
 	const client = trpc($page)
-	const hello = client.greeting.createQuery("foo", { retry: false })
+	const hello = client.greeting.createQuery("World", { retry: false })
 </script>
 
-<p>
+<p class="text-3xl font-bold text-secondary">
 	{#if $hello.isLoading}
 		Loading...
 	{:else if $hello.isError}
