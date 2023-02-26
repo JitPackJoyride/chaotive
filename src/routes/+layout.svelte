@@ -1,8 +1,8 @@
 <script lang="ts">
+	import Header from "$lib/Header.svelte"
 	import { QueryClientProvider } from "@tanstack/svelte-query"
 	import "../app.css"
 	import type { PageData } from "./$types"
-	import Header from "./Header.svelte"
 
 	export let data: PageData
 </script>
