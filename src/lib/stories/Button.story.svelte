@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { buttonClasses } from "$lib/classes"
+	import { buttonClasses } from "$lib/twClasses"
 	import type { Hst } from "@histoire/plugin-svelte"
 	import type { VariantProps } from "class-variance-authority"
 	import { logEvent } from "histoire/client"

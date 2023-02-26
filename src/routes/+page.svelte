@@ -2,13 +2,14 @@
 	import { page } from "$app/stores"
 	import type { Task } from "$db/types"
 	import { trpc } from "$lib/trpc/client"
+	import uuidv4 from "$lib/uuidv4"
 
 	const client = trpc($page)
 	const hello = client.greeting.createQuery("World", { retry: false })
 
 	let tasks: Task[] = [
 		{
-			id: "12",
+			id: uuidv4(),
 			title: "Task 12"
 		}
 	]

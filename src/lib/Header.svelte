@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { buttonClasses } from "./classes"
+	import { buttonClasses } from "./twClasses"
 </script>
 
 <nav class="navbar my-4 rounded-3xl bg-base-200">
