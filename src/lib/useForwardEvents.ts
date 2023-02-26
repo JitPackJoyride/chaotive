@@ -1,5 +1,5 @@
 // Tracking issue: https://github.com/sveltejs/svelte/issues/2837
-// This is a workaround for Svelte not allowing all events to be delegated
+// FIXME: This is a workaround for Svelte not allowing all events to be delegated
 
 import { onDestroy, onMount } from "svelte"
 import { bubble, current_component, listen, SvelteComponent } from "svelte/internal"
@@ -81,7 +81,7 @@ export function useForwardEvents<T extends SvelteComponent | Element>(
 
 	onDestroy(() => {
 		while (destructors.length) {
-			destructors.pop()()
+			destructors.pop()?.()
 		}
 	})
 }
