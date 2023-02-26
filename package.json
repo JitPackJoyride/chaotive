@@ -31,6 +31,7 @@
 		"@tauri-apps/cli": "^1.2.3",
 		"@total-typescript/ts-reset": "^0.3.7",
 		"@types/node": "^18.14.1",
+		"@types/uuid": "^9.0.1",
 		"@typescript-eslint/eslint-plugin": "^5.53.0",
 		"@typescript-eslint/parser": "^5.53.0",
 		"autoprefixer": "^10.4.13",
@@ -64,6 +65,7 @@
 		"tailwind-merge": "^1.10.0",
 		"trpc-svelte-query-adapter": "^2.0.0",
 		"trpc-sveltekit": "^3.4.2",
+		"uuid": "^9.0.0",
 		"validator": "^13.9.0",
 		"zod": "^3.20.6"
 	}
