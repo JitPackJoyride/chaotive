@@ -8,7 +8,11 @@ const config = {
 	preprocess: vitePreprocess(),
 
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
+		alias: {
+			$db: "./dbschema/edgeql-js",
+			"$db/types": "./dbschema/interfaces.ts"
+		}
 	},
 
 	vitePlugin: {

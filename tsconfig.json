@@ -9,6 +9,7 @@
 		"skipLibCheck": true,
 		"sourceMap": true,
 		"strict": true,
+		"downlevelIteration": true,
 		"importHelpers": true,
 		"allowSyntheticDefaultImports": true,
 		"alwaysStrict": true,
