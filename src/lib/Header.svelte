@@ -1,15 +1,19 @@
 <script lang="ts">
-	import { buttonClasses } from "./twClasses"
+	import { page } from "$app/stores"
+
+	$: currentRoute = $page.route.id
+
+	const ALL_ROUTES = {
+		"/": "Execute",
+		"/about": "Triage"
+	}
 </script>
 
-<nav class="navbar my-4 rounded-3xl bg-base-200">
-	<a href="/" class={buttonClasses({ intent: "ghost", size: "large", class: "rounded-2xl" })}>
-		Home
-	</a>
-	<button
-		type="button"
-		class={buttonClasses({ intent: "ghost", size: "large", class: "rounded-2xl" })}
-	>
-		About
-	</button>
+<nav class="btn-group mx-auto my-4 rounded-lg border border-gray-500">
+	{#each Object.entries(ALL_ROUTES) as [route, name]}
+		<a
+			href={route}
+			class="btn-sm btn normal-case first:ml-0 {route === currentRoute && 'btn-active'}">{name}</a
+		>
+	{/each}
 </nav>

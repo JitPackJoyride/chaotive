@@ -6,14 +6,16 @@
 	const tasks = client.getTasks.createQuery(undefined, { retry: false })
 </script>
 
-<h1 class="text-3xl font-bold text-primary">All tasks</h1>
+<div class="flex flex-col items-center justify-center">
+	<h1 class="text-3xl font-bold text-primary">All tasks</h1>
 
-{#if $tasks.isLoading}
-	<p>Loading...</p>
-{:else if $tasks.isError}
-	<p>Error: {$tasks.error.message}</p>
-{:else}
-	{#each $tasks.data as task}
-		<p>{task.title}</p>
-	{/each}
-{/if}
+	{#if $tasks.isLoading}
+		<p>Loading...</p>
+	{:else if $tasks.isError}
+		<p>Error: {$tasks.error.message}</p>
+	{:else}
+		{#each $tasks.data as task}
+			<p>{task.title}</p>
+		{/each}
+	{/if}
+</div>
