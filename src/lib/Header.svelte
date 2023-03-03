@@ -1,11 +1,11 @@
 <script lang="ts">
 	import { page } from "$app/stores"
 
-	$: currentRoute = $page.route.id
+	$: currentRoute = $page.url.pathname
 
 	const ALL_ROUTES = {
 		"/": "Execute",
-		"/about": "Triage"
+		"/triage": "Triage"
 	}
 </script>
 
