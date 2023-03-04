@@ -1,3 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+	html,
+	body {
+		height: 100%;
+	}
+
+	html[data-theme="dark"] {
+		background-color: rgb(18, 18, 18);
+	}
+
+	[data-theme="dark"] {
+		--color-primary-50: theme(colors.sky.50);
+		--color-primary-100: theme(colors.sky.100);
+		--color-primary-200: theme(colors.sky.200);
+		--color-primary-300: theme(colors.sky.300);
+		--color-primary-400: theme(colors.sky.400);
+		--color-primary-500: theme(colors.sky.500);
+		--color-primary-600: theme(colors.sky.600);
+		--color-primary-700: theme(colors.sky.700);
+		--color-primary-800: theme(colors.sky.800);
+		--color-primary-900: theme(colors.sky.900);
+	}
+
+	[data-theme="light"] {
+		--color-primary-50: theme(colors.emerald.50);
+		--color-primary-100: theme(colors.emerald.100);
+		--color-primary-200: theme(colors.emerald.200);
+		--color-primary-300: theme(colors.emerald.300);
+		--color-primary-400: theme(colors.emerald.400);
+		--color-primary-500: theme(colors.emerald.500);
+		--color-primary-600: theme(colors.emerald.600);
+		--color-primary-700: theme(colors.emerald.700);
+		--color-primary-800: theme(colors.emerald.800);
+		--color-primary-900: theme(colors.emerald.900);
+	}
+}

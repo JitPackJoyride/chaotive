@@ -5,9 +5,3 @@
 <div class="flex flex-1 flex-col p-2">
 	<slot />
 </div>
-
-<style>
-	:global(html, body) {
-		height: 100%;
-	}
-</style>

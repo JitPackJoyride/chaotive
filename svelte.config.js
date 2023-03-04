@@ -11,7 +11,8 @@ const config = {
 		adapter: adapter(),
 		alias: {
 			$db: "./dbschema/edgeql-js",
-			"$db/types": "./dbschema/interfaces.ts"
+			"$db/types": "./dbschema/interfaces.ts",
+			$icons: "~icons"
 		}
 	},
 

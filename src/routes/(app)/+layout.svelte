@@ -1,8 +1,8 @@
 <script lang="ts">
-	import Header from "./Header.svelte"
 	import { QueryClientProvider } from "@tanstack/svelte-query"
 	import "../../app.css"
 	import type { PageData } from "./$types"
+	import Header from "./Header.svelte"
 
 	export let data: PageData
 </script>
@@ -13,9 +13,3 @@
 		<slot />
 	</main>
 </QueryClientProvider>
-
-<style>
-	:global(html, body) {
-		height: 100%;
-	}
-</style>

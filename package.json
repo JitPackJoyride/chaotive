@@ -31,6 +31,7 @@
 	"devDependencies": {
 		"@edgedb/generate": "^0.0.7",
 		"@histoire/plugin-svelte": "^0.15.8",
+		"@iconify/json": "^2.2.30",
 		"@playwright/test": "^1.31.1",
 		"@square/svelte-store": "^1.0.14",
 		"@sveltejs/adapter-auto": "^2.0.0",
@@ -56,9 +57,11 @@
 		"prettier-plugin-tailwindcss": "^0.2.3",
 		"svelte": "^3.55.1",
 		"svelte-check": "^3.0.4",
+		"sveltekit-superforms": "^0.5.16",
 		"tailwindcss": "^3.2.7",
 		"tslib": "^2.5.0",
 		"typescript": "^4.9.5",
+		"unplugin-icons": "^0.15.3",
 		"vite": "^4.1.4",
 		"vitest": "^0.29.1"
 	},
@@ -72,10 +75,11 @@
 		"edgedb": "^1.0.2",
 		"is-what": "^4.1.8",
 		"tailwind-merge": "^1.10.0",
+		"theme-change": "^2.5.0",
 		"trpc-svelte-query-adapter": "^2.0.0",
 		"trpc-sveltekit": "^3.4.2",
 		"uuid": "^9.0.0",
 		"validator": "^13.9.0",
-		"zod": "^3.20.6"
+		"zod": "^3.21"
 	}
 }
