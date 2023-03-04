@@ -13,7 +13,17 @@
 	{#each Object.entries(ALL_ROUTES) as [route, name]}
 		<a
 			href={route}
-			class="btn-sm btn normal-case first:ml-0 {route === currentRoute && 'btn-active'}">{name}</a
+			class="btn-sm btn font-medium normal-case first:ml-0 
+			{route === currentRoute && 'active'}"
 		>
+			{name}
+		</a>
 	{/each}
 </nav>
+
+<style lang="postcss">
+	a.active {
+		background: linear-gradient(theme(colors.slate.400) 10%, theme(colors.slate.600));
+		color: theme(colors.white);
+	}
+</style>
