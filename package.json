@@ -4,8 +4,8 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"dev-app": "concurrently --names \"HISTOIRE,tauri\" -c \"bgMagenta.bold,bgBlue.bold\" \"npm run story:dev\" \"npm run tauri\"",
-		"dev": "concurrently --names \"histoire,sveltekit\" -c \"bgMagenta.bold,bgBlue.bold\" \"npm run story:dev\" \"npm run vite:dev\"",
+		"dev-app": "concurrently --names \"HISTOIRE,tauri\" -c \"bgMagenta.white.bold,bgBlue.white.bold\" \"npm run story:dev\" \"npm run tauri\"",
+		"dev": "concurrently --names \"histoire,sveltekit\" -c \"bgMagenta.white.bold,bgBlue.white.bold\" \"npm run story:dev\" \"npm run vite:dev\"",
 		"build": "npm run vite:build",
 		"local-build": "npm run vite:build && npm run vite:preview",
 		"tauri": "tauri",
