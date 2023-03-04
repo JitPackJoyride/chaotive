@@ -14,7 +14,7 @@
 	</main>
 </QueryClientProvider>
 
-<style lang="postcss">
+<style>
 	:global(html, body) {
 		height: 100%;
 	}

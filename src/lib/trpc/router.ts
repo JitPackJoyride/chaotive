@@ -5,10 +5,11 @@ import e from "$db"
 
 export const router = t.router({
 	getTasks: t.procedure.query(async () => {
-		const query = e.select(e.Task, (task) => ({
+		const query = e.select(e.Task, () => ({
 			id: true,
 			title: true
 		}))
+
 		const tasks = await query.run(client)
 		return tasks
 	})
