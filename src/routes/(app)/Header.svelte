@@ -24,7 +24,7 @@
 	$: isLightMode = initialTheme === "light" ? true : false
 </script>
 
-<nav class="my-4 grid grid-cols-3">
+<nav class="grid grid-cols-3">
 	<div />
 	<div class="flex justify-center">
 		<div class="btn-group rounded-lg">

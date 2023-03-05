@@ -4,9 +4,10 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"dev-app": "concurrently --names \"HISTOIRE,tauri\" -c \"bgMagenta.white.bold,bgBlue.white.bold\" \"npm run story:dev\" \"npm run tauri\"",
+		"dev-app": "concurrently --names \"HISTOIRE,tauri\" -c \"bgMagenta.white.bold,bgBlue.white.bold\" \"npm run story:dev\" \"npm run tauri dev\"",
 		"dev": "concurrently --names \"histoire,sveltekit\" -c \"bgMagenta.white.bold,bgBlue.white.bold\" \"npm run story:dev\" \"npm run vite:dev\"",
 		"build": "npm run vite:build",
+		"build-app": "npm run tauri build",
 		"local-build": "npm run vite:build && npm run vite:preview",
 		"tauri": "tauri",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",

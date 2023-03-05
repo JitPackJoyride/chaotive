@@ -9,7 +9,7 @@
 
 <QueryClientProvider client={data.queryClient}>
 	<Header />
-	<main class="mx-auto max-w-2xl flex-1">
+	<main class="mx-auto mt-4 max-w-2xl flex-1">
 		<slot />
 	</main>
 </QueryClientProvider>
