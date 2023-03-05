@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { page } from "$app/stores"
-	import SunIcon from "$icons/carbon/sun"
-	import MoonIcon from "$icons/heroicons/moon"
 	import { cx } from "class-variance-authority"
 	import { onMount } from "svelte"
 	import { themeChange } from "theme-change"
+	import SunIcon from "~icons/carbon/sun"
+	import MoonIcon from "~icons/heroicons/moon"
 
 	$: currentRoute = $page.url.pathname
 
@@ -42,16 +42,17 @@
 		</div>
 	</div>
 	<div class="flex items-center justify-end">
-		<label class="swap swap-rotate">
+		<label class="swap-rotate swap">
 			<!-- this hidden checkbox controls the state -->
 			<input
 				type="checkbox"
 				bind:checked={isLightMode}
 				data-toggle-theme="dark,light"
 				data-act-class="ACTIVECLASS"
+				aria-label="Activate {isLightMode ? 'dark' : 'light'} mode"
 			/>
-			<SunIcon class="swap-on h-5 w-5 fill-current" />
-			<MoonIcon class="swap-off h-5 w-5 fill-current" />
+			<SunIcon class="swap-on h-4 w-4 fill-current" />
+			<MoonIcon class="swap-off h-3.5 w-3.5 fill-current" />
 		</label>
 	</div>
 </nav>
