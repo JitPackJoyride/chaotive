@@ -6,7 +6,7 @@
 	const tasks = client.getTasks.createQuery()
 </script>
 
-<div class="flex flex-col items-center justify-center">
+<div class="flex flex-col items-center justify-center py-2">
 	{#if $tasks.isLoading}
 		<p>Loading...</p>
 	{:else if $tasks.isError}

@@ -8,9 +8,13 @@
 
 	$: currentRoute = $page.url.pathname
 
+	const ALL_NON_ROOT_ROUTES = {
+		"/create": "Create"
+	}
+
 	const ALL_ROUTES = {
 		"/": "Execute",
-		"/triage": "Triage"
+		...ALL_NON_ROOT_ROUTES
 	}
 
 	let initialTheme: string | null = "dark"
@@ -22,18 +26,25 @@
 	})
 
 	$: isLightMode = initialTheme === "light" ? true : false
+
+	$: console.log("currentRoute", currentRoute)
 </script>
 
-<nav class="grid grid-cols-3">
+<nav class="grid grid-cols-3 border-b border-gray-500 py-3 px-4">
 	<div />
 	<div class="flex justify-center">
 		<div class="btn-group rounded-lg">
 			{#each Object.entries(ALL_ROUTES) as [route, name]}
+				{@const isRouteActive =
+					route === "/"
+						? // Make sure that no other route is active when the root route is active
+						  !Object.keys(ALL_NON_ROOT_ROUTES).some((route) => currentRoute.startsWith(route))
+						: currentRoute.startsWith(route)}
 				<a
 					href={route}
 					class={cx(
 						"btn-sm btn border-gray-500 font-medium normal-case first:ml-0",
-						route === currentRoute ? "active" : ""
+						isRouteActive ? "active" : ""
 					)}
 				>
 					{name}
